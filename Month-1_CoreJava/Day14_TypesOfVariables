@@ -1,0 +1,45 @@
+// Month-1_CoreJava/Day14_TypesOfVariables/VariablesTypesExample.java
+// Day 14: Types of Variables in Java
+// Topic: Understanding Instance Variables and Local Variables
+
+public class VariablesTypesExample {
+
+    // Instance variable (belongs to object)
+    int instanceVar = 50;  
+    // Each object of this class will have its own copy of 'instanceVar'
+
+    public static void main(String[] args) {
+
+        // Local variable (declared inside main method)
+        int localVar = 20;  
+        // Accessible only inside this main method
+        System.out.println("Local Variable: " + localVar);  
+        // Prints value of localVar
+
+        // Creating object to access instance variable
+        VariablesTypesExample obj = new VariablesTypesExample();  
+        // Creates object 'obj' of the class to access instance variables
+        System.out.println("Instance Variable: " + obj.instanceVar);  
+        // Prints value of instanceVar using object 'obj'
+
+        // Changing instance variable value using object
+        obj.instanceVar = 100;  
+        // Updates instanceVar for this particular object only
+        System.out.println("Updated Instance Variable: " + obj.instanceVar);  
+        // Prints updated value of instanceVar
+
+        // Another object to show instance variable is separate for each object
+        VariablesTypesExample obj2 = new VariablesTypesExample();  
+        // Creates second object 'obj2'
+        System.out.println("Instance Variable of obj2: " + obj2.instanceVar);  
+        // Prints default value of instanceVar for obj2 (still 50)
+    }
+}
+output:
+Local Variable: 20
+Instance Variable: 50
+Updated Instance Variable: 100
+Instance Variable of obj2: 50
+
+
+
