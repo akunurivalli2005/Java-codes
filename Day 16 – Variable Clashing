@@ -1,0 +1,35 @@
+// Month-1_CoreJava/Day16_VariableShadowing/VariableShadowingExample.java
+// Day 16: Variable Clashing / Shadowing in Java
+// Topic: Understanding how local variables can shadow instance variables
+
+public class VariableShadowingExample {
+
+    // Instance variable
+    int number = 50;  
+    // This is the class-level variable (instance variable)
+
+    // Method demonstrating shadowing
+    void display() {
+        int number = 100;  
+        // Local variable with same name as instance variable
+        // This local variable 'shadows' the instance variable within this method
+
+        System.out.println("Local Variable: " + number);  
+        // Prints the local variable (100) instead of instance variable (50)
+
+        System.out.println("Instance Variable: " + this.number);  
+        // Using 'this' keyword to access the instance variable (50)
+    }
+
+    public static void main(String[] args) {
+        // Creating object to access instance variable and method
+        VariableShadowingExample obj = new VariableShadowingExample();
+
+        // Calling display method to see shadowing in action
+        obj.display();  
+        // Prints both local and instance variable values
+    }
+}
+output:
+Local Variable: 100
+Instance Variable: 50
