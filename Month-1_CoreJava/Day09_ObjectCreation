@@ -1,0 +1,40 @@
+// Month-1_CoreJava/Day09_ObjectCreation/ObjectCreationExample.java
+// Day 9: Object Creation in Java
+// Topic: How to create and use objects of a class
+
+// Class definition
+class Student {
+    // Instance variables (properties of each object)
+    String name;   // Stores the name of the student
+    int age;       // Stores the age of the student
+
+    // Method to display student details
+    void displayDetails() {
+        System.out.println("Name: " + name);  // Prints the name of the student
+        System.out.println("Age: " + age);    // Prints the age of the student
+    }
+}
+
+public class ObjectCreationExample {
+    public static void main(String[] args) {
+        // Creating first object of Student class
+        Student student1 = new Student();  // 'student1' is an object of Student
+
+        // Assigning values to the object's properties
+        student1.name = "Harshavalli";      // Setting name of student1
+        student1.age = 20;                  // Setting age of student1
+
+        // Creating second object of Student class
+        Student student2 = new Student();  // 'student2' is another object of Student
+
+        // Assigning values to the second object
+        student2.name = "Akunuri";         // Setting name of student2
+        student2.age = 22;                 // Setting age of student2
+
+        // Calling method to display details of student1
+        student1.displayDetails();         // Prints Name and Age of student1
+
+        // Calling method to display details of student2
+        student2.displayDetails();         // Prints Name and Age of student2
+    }
+}
