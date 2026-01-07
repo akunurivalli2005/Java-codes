@@ -1,0 +1,42 @@
+// Month-1_CoreJava/Day15_ThisKeyword/ThisKeywordExample.java
+// Day 15: 'this' Keyword in Java
+// Topic: Understanding and using the 'this' keyword
+
+public class ThisKeywordExample {
+
+    // Instance variable
+    int number;
+
+    // Constructor with a parameter having the same name as instance variable
+    ThisKeywordExample(int number) {
+        this.number = number;  
+        // 'this.number' refers to the instance variable
+        // 'number' refers to the constructor parameter
+        // Assigns the value of parameter to instance variable
+    }
+
+    // Method to display value of instance variable
+    void display() {
+        System.out.println("Number: " + this.number);  
+        // Using 'this' to explicitly refer to the current object's instance variable
+    }
+
+    public static void main(String[] args) {
+        // Creating object and passing value to constructor
+        ThisKeywordExample obj1 = new ThisKeywordExample(50);  
+        // 'number' in constructor = 50, assigned to obj1.number using 'this'
+
+        ThisKeywordExample obj2 = new ThisKeywordExample(100);  
+        // Another object with its own instance variable
+
+        obj1.display();  
+        // Prints value of obj1's number → 50
+
+        obj2.display();  
+        // Prints value of obj2's number → 100
+    }
+}
+output:
+Number: 50
+Number: 100
+
