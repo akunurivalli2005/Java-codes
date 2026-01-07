@@ -1,0 +1,48 @@
+// Month-1_CoreJava/Day11_Methods/MethodsExample.java
+// Day 11: Methods in Java
+// Topic: Understanding and using methods
+
+public class MethodsExample {
+
+    // Method with no return type and no parameters
+    void greet() {
+        System.out.println("Hello, welcome to Java Methods!");  
+        // Prints a greeting message when this method is called
+    }
+
+    // Method with parameters and no return type
+    void addNumbers(int a, int b) {
+        int sum = a + b;  // Adds the two parameters a and b
+        System.out.println("Sum: " + sum);  
+        // Prints the result of addition
+    }
+
+    // Method with return type
+    int multiplyNumbers(int x, int y) {
+        int product = x * y;  // Multiplies x and y
+        return product;       // Returns the product to the caller
+    }
+
+    // Main method - starting point of the program
+    public static void main(String[] args) {
+        MethodsExample obj = new MethodsExample();  
+        // Creates an object 'obj' of MethodsExample class to access non-static methods
+
+        obj.greet();  
+        // Calls the greet() method to print greeting message
+
+        obj.addNumbers(5, 10);  
+        // Calls addNumbers() method with arguments 5 and 10, prints the sum
+
+        int result = obj.multiplyNumbers(4, 6);  
+        // Calls multiplyNumbers() method with 4 and 6, stores returned value in 'result'
+
+        System.out.println("Product: " + result);  
+        // Prints the product returned by multiplyNumbers() method
+    }
+}
+output:
+Hello, welcome to Java Methods!
+Sum: 15
+Product: 24
+
