@@ -1,0 +1,46 @@
+// Month-1_CoreJava/Day17_Inheritance/InheritanceExample.java
+// Day 17: Inheritance in Java
+// Topic: Understanding how one class can inherit properties and methods from another
+
+// Parent class (Super class)
+class Vehicle {
+    String brand = "Toyota";  // Instance variable
+
+    void honk() {
+        System.out.println("Vehicle is honking!");  
+        // Method to simulate honking
+    }
+}
+
+// Child class (Subclass) inherits from Vehicle
+class Car extends Vehicle {
+    String model = "Corolla";  // Additional property for Car
+
+    void display() {
+        System.out.println("Brand: " + brand);  
+        // Accessing inherited instance variable from Vehicle
+
+        System.out.println("Model: " + model);  
+        // Accessing child class variable
+
+        honk();  
+        // Calling inherited method from Vehicle
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        // Creating object of child class
+        Car myCar = new Car();  
+
+        // Calling method to display details
+        myCar.display();  
+        // Shows inherited and child class properties and method
+    }
+}
+output:
+Brand: Toyota
+Model: Corolla
+Vehicle is honking!
+
+
