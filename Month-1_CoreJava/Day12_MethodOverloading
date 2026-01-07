@@ -1,0 +1,52 @@
+// Month-1_CoreJava/Day12_MethodOverloading/MethodOverloadingExample.java
+// Day 12: Method Overloading in Java
+// Topic: Using the same method name with different parameters
+
+public class MethodOverloadingExample {
+
+    // Method 1: No parameters
+    void display() {
+        System.out.println("Hello! This is a method with no parameters.");
+        // Prints message when no arguments are provided
+    }
+
+    // Method 2: One integer parameter
+    void display(int number) {
+        System.out.println("Number: " + number);
+        // Prints the integer passed as an argument
+    }
+
+    // Method 3: Two integer parameters
+    void display(int a, int b) {
+        System.out.println("Sum of " + a + " and " + b + " is " + (a + b));
+        // Calculates sum of a and b, then prints the result
+    }
+
+    // Method 4: String parameter
+    void display(String message) {
+        System.out.println("Message: " + message);
+        // Prints the string passed as an argument
+    }
+
+    public static void main(String[] args) {
+        MethodOverloadingExample obj = new MethodOverloadingExample();
+        // Create an object 'obj' to access non-static methods
+
+        obj.display();  
+        // Calls display() with no arguments, prints default message
+
+        obj.display(10);  
+        // Calls display(int number) with 10 as argument
+
+        obj.display(5, 7);  
+        // Calls display(int a, int b) with 5 and 7 as arguments
+
+        obj.display("Java is fun!");  
+        // Calls display(String message) with string argument
+    }
+}
+output:Hello! This is a method with no parameters.
+Number: 10
+Sum of 5 and 7 is 12
+Message: Java is fun!
+
