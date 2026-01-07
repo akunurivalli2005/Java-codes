@@ -1,0 +1,40 @@
+// Day 7: Strings in Java
+// Topic: Understanding and using String data type
+
+public class StringExample {
+    public static void main(String[] args) {
+
+        // Creating a string using string literal
+        String name = "Harshavalli";  // 'name' stores the text "Harshavalli"
+
+        // Creating a string using 'new' keyword
+        String greeting = new String("Hello Java!"); // 'greeting' is another way to create a string
+
+        // Concatenation of strings
+        String fullMessage = greeting + " My name is " + name;  
+        // Combines 'greeting', the text " My name is ", and 'name' into one string
+
+        // Finding length of a string
+        int lengthOfName = name.length();  
+        // 'length()' method returns the number of characters in 'name'
+
+        // Accessing a character at a specific index
+        char firstChar = name.charAt(0);  
+        // 'charAt(0)' returns the first character of 'name', indexing starts from 0
+
+        // Converting string to uppercase
+        String upperCaseName = name.toUpperCase();  
+        // Converts all characters in 'name' to uppercase
+
+        // Checking if string contains certain text
+        boolean hasJava = greeting.contains("Java");  
+        // 'contains()' returns true if 'greeting' has the word "Java"
+
+        // Printing all results
+        System.out.println(fullMessage);        // Prints the combined message
+        System.out.println("Length: " + lengthOfName);  // Prints the length of 'name'
+        System.out.println("First character: " + firstChar); // Prints first character
+        System.out.println("Uppercase: " + upperCaseName); // Prints 'name' in uppercase
+        System.out.println("Contains 'Java'? " + hasJava); // Prints true/false
+    }
+}
