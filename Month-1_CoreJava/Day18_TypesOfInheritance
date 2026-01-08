@@ -1,0 +1,95 @@
+Theory: Types of Inheritance
+
+Inheritance allows one class to acquire properties and methods of another class using the extends keyword.
+
+1. Single Inheritance
+
+One child class inherits from one parent class.
+
+Simple and commonly used.
+
+Example: Child → Parent
+
+2. Multilevel Inheritance
+
+A class inherits from a child class (chain inheritance).
+
+Example: GrandChild → Child → Parent
+
+3. Hierarchical Inheritance
+
+Multiple child classes inherit from the same parent class.
+
+Example: Child1 → Parent, Child2 → Parent
+
+4. Multiple Inheritance (Not supported using classes)
+
+Java does not support multiple inheritance with classes to avoid ambiguity.
+
+Achieved using interfaces (will be covered later)
+
+// Month-1_CoreJava/Day18_TypesOfInheritance/TypesOfInheritanceExample.java
+// Day 18: Types of Inheritance in Java
+
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("Animal eats food");
+        // Common behavior for all animals
+    }
+}
+
+// Single Inheritance: Dog inherits from Animal
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+        // Specific behavior of Dog
+    }
+}
+
+// Multilevel Inheritance: Puppy inherits from Dog (Animal -> Dog -> Puppy)
+class Puppy extends Dog {
+    void play() {
+        System.out.println("Puppy plays");
+        // Specific behavior of Puppy
+    }
+}
+
+// Hierarchical Inheritance: Cat also inherits from Animal
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat meows");
+        // Specific behavior of Cat
+    }
+}
+
+public class TypesOfInheritanceExample {
+    public static void main(String[] args) {
+
+        // Single Inheritance example
+        Dog dog = new Dog();
+        dog.eat();   // Inherited from Animal
+        dog.bark();  // Dog's own method
+
+        // Multilevel Inheritance example
+        Puppy puppy = new Puppy();
+        puppy.eat();   // From Animal
+        puppy.bark();  // From Dog
+        puppy.play();  // From Puppy
+
+        // Hierarchical Inheritance example
+        Cat cat = new Cat();
+        cat.eat();   // Inherited from Animal
+        cat.meow();  // Cat's own method
+    }
+}
+Output:
+Animal eats food
+Dog barks
+Animal eats food
+Dog barks
+Puppy plays
+Animal eats food
+Cat meows
+
+
