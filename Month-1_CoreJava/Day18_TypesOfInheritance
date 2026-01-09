@@ -26,7 +26,13 @@ Example: Child1 → Parent, Child2 → Parent
 
 Java does not support multiple inheritance with classes to avoid ambiguity.
 
-Achieved using interfaces (will be covered later)
+Achieved using interfaces.
+Why we cannot achieve multiple inheritance using classs?
+ANS:In java, we cannot achieve multiple inheritance class beacause of 2 main reasons 
+1)Ambiquity while method-calling
+2)Ambiquity while Constructor-chaining/calling
+Diamond Problem: means even though, if we declare different in super class still we face ambiquity problem.That is when both the super classes extends to supermost class called class object,it inherits all the eleven methods which is present in both the super classes and when we try to call these methods in childclass it causes ambiquity error 
+this is called diamond problem.
 
 // Month-1_CoreJava/Day18_TypesOfInheritance/TypesOfInheritanceExample.java
 // Day 18: Types of Inheritance in Java
