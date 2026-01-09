@@ -1,0 +1,37 @@
+By using Inheritance we can inherit variables and methods but not constructor and blocks
+"final" class cannot have subclass(final class cannot be inherited)
+ex:final class Parent
+   { 
+   }
+   class Child extends Parent
+   {
+    }
+it does not workout it gets error because,
+1)They are few inbuilt final classes which cannot be extended
+a)String
+b)Scanner
+c)System
+d)StringBuilder
+e)Stringbuffer
+2)final class cannot be inherited but we can access the properities and behaviour of final class by creating the object.
+3)final class itself can inherit from its superclass.but it doesnot allow thesubclass/child to inherit it.
+How to avoid inheritance for a class?
+Ans:By declaring the class as "final"
+    By declaring the "private construct" in a "class".
+    private members of class cannot be inherited but it can be accessed.
+Eg:
+class Father
+{ 
+long money=150000;
+private String gfname:"Aliabat";
+void Laugh()
+{
+}
+void talk()
+{
+}
+private void Smoke()
+{
+}
+}
+class Son extends Father
